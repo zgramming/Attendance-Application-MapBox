@@ -4,21 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:global_template/global_template.dart';
+import 'package:intl/intl.dart';
+import 'package:latlong/latlong.dart';
 import 'package:network/network.dart';
+import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 import 'package:user_location/user_location.dart';
-import 'package:latlong/latlong.dart';
-import 'package:provider/provider.dart';
-import 'package:intl/intl.dart';
-import '../../providers/maps_provider.dart';
-import '../../providers/absen_provider.dart';
-import '../../providers/user_provider.dart';
+
 import '../../function/common_function.dart';
-import './widgets/welcome_screen/button_attendance.dart';
+import '../../providers/absen_provider.dart';
+import '../../providers/maps_provider.dart';
+import '../../providers/user_provider.dart';
+
 import './welcome_screen.dart';
+import './widgets/welcome_screen/button_attendance.dart';
 
 class MapScreen extends StatefulWidget {
-  static const routeNamed = "/map-screen";
+  static const routeNamed = '/map-screen';
 
   @override
   _MapScreenState createState() => _MapScreenState();
@@ -73,7 +75,7 @@ class _MapScreenState extends State<MapScreen> {
               ),
               layers: [
                 TileLayerOptions(
-                  urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                   subdomains: ['a', 'b', 'c'],
                 ),
                 // ADD THIS

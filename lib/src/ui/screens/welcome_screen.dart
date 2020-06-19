@@ -4,14 +4,14 @@ import 'package:geolocator/geolocator.dart';
 
 import '../../function/common_function.dart';
 import '../screens/widgets/drawer/drawer_custom.dart';
-import './widgets/welcome_screen/button_attendance.dart';
 import './widgets/welcome_screen/animated_table_calendar.dart';
+import './widgets/welcome_screen/button_attendance.dart';
 import './widgets/welcome_screen/card_overall_monthly.dart';
 import './widgets/welcome_screen/fab.dart';
 import './widgets/welcome_screen/user_profile.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  static const routeNamed = "/welcome-screen";
+  static const routeNamed = '/welcome-screen';
 
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
@@ -75,7 +75,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               ],
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 10,
             right: 60,
             bottom: 10,

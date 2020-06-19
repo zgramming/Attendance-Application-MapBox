@@ -3,6 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:global_template/global_template.dart';
 
 class ButtonCustom extends StatelessWidget {
+  const ButtonCustom({
+    @required this.onPressed,
+    this.alignment = Alignment.bottomRight,
+    this.icon,
+    this.child,
+    this.disabledColor,
+    this.disabledElevation,
+    this.disabledTextColor,
+    this.textStyle,
+    this.shape,
+    this.buttonColor,
+    this.padding,
+    this.buttonPlusIcon = false,
+    this.buttonTitle = 'SUBMIT',
+    this.buttonSize = 1,
+    this.buttonHeight = 18,
+    this.fontWeight = FontWeight.normal,
+  });
   final double disabledElevation;
   final double buttonSize;
   final double buttonHeight;
@@ -19,34 +37,16 @@ class ButtonCustom extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final AlignmentGeometry alignment;
   final Widget child;
-  ButtonCustom({
-    @required this.onPressed,
-    this.alignment = Alignment.bottomRight,
-    this.icon,
-    this.child,
-    this.disabledColor,
-    this.disabledElevation,
-    this.disabledTextColor,
-    this.textStyle,
-    this.shape,
-    this.buttonColor,
-    this.padding,
-    this.buttonPlusIcon = false,
-    this.buttonTitle = "SUBMIT",
-    this.buttonSize = 1,
-    this.buttonHeight = 18,
-    this.fontWeight = FontWeight.normal,
-  });
   @override
   Widget build(BuildContext context) {
-    var defaultButton = RaisedButton(
+    final defaultButton = RaisedButton(
       onPressed: onPressed,
       disabledColor: disabledColor,
       disabledTextColor: disabledTextColor,
       disabledElevation: disabledElevation,
       shape: shape,
       textTheme: ButtonTextTheme.primary,
-      color: buttonColor == null ? colorPallete.primaryColor : buttonColor,
+      color: buttonColor ?? colorPallete.primaryColor,
       child: child ??
           Text(
             buttonTitle,
@@ -57,15 +57,15 @@ class ButtonCustom extends StatelessWidget {
                     ),
           ),
     );
-    var buttonIcon = RaisedButton.icon(
+    final buttonIcon = RaisedButton.icon(
       onPressed: onPressed,
       disabledColor: disabledColor,
       disabledTextColor: disabledTextColor,
       disabledElevation: disabledElevation,
       shape: shape,
       textTheme: ButtonTextTheme.primary,
-      color: buttonColor == null ? Theme.of(context).primaryColor : buttonColor,
-      icon: icon ?? SizedBox(),
+      color: buttonColor ?? Theme.of(context).primaryColor,
+      icon: icon ?? const SizedBox(),
       label: child ??
           Text(
             buttonTitle,

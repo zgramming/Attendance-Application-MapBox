@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:global_template/global_template.dart';
 
 class PopupPermission extends StatelessWidget {
-  PopupPermission({
+  const PopupPermission({
     @required this.typePermission,
     this.buttonTitleAccept = 'Setuju',
     this.iconClose = Icons.close,
@@ -28,7 +28,7 @@ class PopupPermission extends StatelessWidget {
         onWillPop: () async => closeOnBackButton,
         child: AlertDialog(
           title: Container(
-            decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
+            decoration: const BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
             padding: const EdgeInsets.only(bottom: 10),
             child: Selector<GlobalProvider, String>(
               selector: (_, provider) => provider.appNamePackageInfo,
@@ -45,19 +45,19 @@ class PopupPermission extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(iconPermission, size: sizes.width(context) / 6),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               RichText(
                 text: TextSpan(children: [
-                  TextSpan(text: 'Aplikasi Membutuhkan Akses '),
+                  const TextSpan(text: 'Aplikasi Membutuhkan Akses '),
                   TextSpan(
-                      text: "$typePermission ",
+                      text: '$typePermission ',
                       style: appTheme
                           .headline6(context)
                           .copyWith(fontWeight: FontWeight.bold, color: colorPallete.accentColor)),
-                  TextSpan(text: 'Untuk Dapat Berjalan Dengan Lancar')
+                  const TextSpan(text: 'Untuk Dapat Berjalan Dengan Lancar')
                 ], style: appTheme.caption(context)),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
             ],
           ),
           actions: [

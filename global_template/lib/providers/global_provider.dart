@@ -31,10 +31,10 @@ class GlobalProvider extends ChangeNotifier {
     final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
     try {
       if (Platform.isAndroid) {
-        var buildAndroid = await deviceInfoPlugin.androidInfo;
+        final buildAndroid = await deviceInfoPlugin.androidInfo;
         identifier = buildAndroid.androidId;
       } else if (Platform.isIOS) {
-        var buildIos = await deviceInfoPlugin.iosInfo;
+        final buildIos = await deviceInfoPlugin.iosInfo;
         identifier = buildIos.identifierForVendor;
       }
     } on PlatformException {
@@ -103,7 +103,7 @@ class GlobalProvider extends ChangeNotifier {
   }
 
   bool get obsecurePassword => _obsecurePassword;
-  setObsecurePassword(bool value) {
+  void setObsecurePassword(bool value) {
     _obsecurePassword = !value;
     notifyListeners();
   }

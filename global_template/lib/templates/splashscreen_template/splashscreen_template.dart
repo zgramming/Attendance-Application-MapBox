@@ -4,30 +4,30 @@ import 'package:flutter/material.dart';
 import '../copyright_version_template/copyright_version_template.dart';
 
 class SplashScreenTemplate extends StatefulWidget {
-  final int duration;
-  final Widget image;
-  final Object navigateAfterSplashScreen;
-  final Color backgroundColor;
-
-  SplashScreenTemplate({
+  const SplashScreenTemplate({
     this.duration = 4,
     this.backgroundColor,
     @required this.image,
     @required this.navigateAfterSplashScreen,
   });
+  final int duration;
+  final Widget image;
+  final Object navigateAfterSplashScreen;
+  final Color backgroundColor;
+
   @override
   _SplashScreenTemplateState createState() => _SplashScreenTemplateState();
 }
 
 class _SplashScreenTemplateState extends State<SplashScreenTemplate> {
-  startTime() async {
-    var _duration = Duration(seconds: widget.duration);
+  Future<void> startTime() async {
+    final _duration = Duration(seconds: widget.duration);
     return Timer(_duration, navigationPage);
   }
 
-  navigationPage() {
+  void navigationPage() {
     Future.delayed(
-        Duration(milliseconds: 500),
+        const Duration(milliseconds: 500),
         () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (context) => widget.navigateAfterSplashScreen)));
   }
@@ -41,8 +41,7 @@ class _SplashScreenTemplateState extends State<SplashScreenTemplate> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color:
-          widget.backgroundColor == null ? Theme.of(context).primaryColor : widget.backgroundColor,
+      color: widget.backgroundColor ?? Theme.of(context).primaryColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -51,7 +50,7 @@ class _SplashScreenTemplateState extends State<SplashScreenTemplate> {
             flex: 10,
             child: widget.image,
           ),
-          Flexible(
+          const Flexible(
             flex: 2,
             child: Align(
               alignment: Alignment.center,

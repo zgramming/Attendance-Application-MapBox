@@ -183,13 +183,14 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:global_template/global_template.dart';
-import 'package:provider/provider.dart';
 import 'package:latlong/latlong.dart';
-import 'pick_destination_screen/add_destination_form.dart';
+import 'package:provider/provider.dart';
+
 import '../../providers/maps_provider.dart';
+import './pick_destination_screen/add_destination_form.dart';
 
 class AddDestinationScreen extends StatefulWidget {
-  static const routeNamed = "/add-destination-screen";
+  static const routeNamed = '/add-destination-screen';
 
   @override
   _AddDestinationScreenState createState() => _AddDestinationScreenState();
@@ -248,16 +249,16 @@ class _AddDestinationScreenState extends State<AddDestinationScreen> {
                   center: LatLng(position.latitude, position.longitude),
                   zoom: 13.0,
                   onPositionChanged: (mapPositioned, hasGesture) {
-                    print("Move Camera ${mapPositioned.center}");
+                    print('Move Camera ${mapPositioned.center}');
                     Future.delayed(
-                        Duration(seconds: 1),
+                        const Duration(seconds: 1),
                         () =>
                             context.read<MapsProvider>().setTrackingCameraPosition(mapPositioned));
                   },
                 ),
                 layers: [
                   TileLayerOptions(
-                    urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                     subdomains: ['a', 'b', 'c'],
                   ),
                   MarkerLayerOptions(
@@ -267,7 +268,7 @@ class _AddDestinationScreenState extends State<AddDestinationScreen> {
                         height: 80.0,
                         point: LatLng(51.5, -0.09),
                         builder: (ctx) => Container(
-                          child: FlutterLogo(),
+                          child: const FlutterLogo(),
                         ),
                       ),
                     ],
