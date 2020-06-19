@@ -60,6 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       drawer: DrawerCustom(),
       body: Stack(
         fit: StackFit.expand,
@@ -67,7 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(height: kToolbarHeight * 1.5),
+                const SizedBox(height: kToolbarHeight / 2),
                 UserProfile(),
                 CardOverallMonthly(),
                 AnimatedCalendarAndTable(),

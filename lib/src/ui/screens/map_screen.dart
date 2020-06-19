@@ -32,7 +32,7 @@ class _MapScreenState extends State<MapScreen> {
   UserLocationOptions userLocationOptions;
   // ADD THIS
   List<Marker> markers = [];
-  static const double radiusCircle = 20;
+  static const double radiusCircle = 6;
   StreamSubscription<Position> _positionStream;
 
   @override
@@ -128,13 +128,14 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   CircleMarker buildCircleMarker(Tuple2<Position, DestinasiModel> value) {
-    print(commonF.getDistanceLocation(value.item1, value.item2));
+    print('DISTANCE LOCATION ${commonF.getDistanceLocation(value.item1, value.item2)}');
     return CircleMarker(
       borderColor: colorPallete.transparent,
       color: commonF
           .changeColorRadius(commonF.getDistanceLocation(value.item1, value.item2), radiusCircle)
           .withOpacity(.6),
       radius: radiusCircle,
+      useRadiusInMeter: true,
       point: LatLng(
         value.item2.latitude,
         value.item2.longitude,
