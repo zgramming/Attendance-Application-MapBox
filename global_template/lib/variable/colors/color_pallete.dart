@@ -14,10 +14,10 @@ class ColorPallete {
   Color greyTransparent = const Color(0xFFBDBDBD);
 
   ///Primary Color
-  Color primaryColor = const Color(0xff7c73e6);
+  Color primaryColor = const Color(0xffd92027);
 
   ///Accent Color
-  Color accentColor = const Color(0xff73A4E6);
+  Color accentColor = const Color(0xffD97620);
 
   /// Scaffold Color
   Color scaffoldColor = const Color(0xFFf9f9f9);

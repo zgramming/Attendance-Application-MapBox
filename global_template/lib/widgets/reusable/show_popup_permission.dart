@@ -30,28 +30,14 @@ class PopupPermission extends StatelessWidget {
           title: Container(
             decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1))),
             padding: const EdgeInsets.only(bottom: 10),
-            child: Row(
-              children: [
-                Selector<GlobalProvider, String>(
-                  selector: (_, provider) => provider.appNamePackageInfo,
-                  builder: (_, value, __) => Text(
-                    value.toUpperCase(),
-                    style: appTheme.headline6(context).copyWith(fontWeight: FontWeight.bold),
-                  ),
+            child: Selector<GlobalProvider, String>(
+              selector: (_, provider) => provider.appNamePackageInfo,
+              builder: (_, value, __) => FittedBox(
+                child: Text(
+                  value.toUpperCase(),
+                  // style: appTheme.headline6(context).copyWith(fontWeight: FontWeight.bold),
                 ),
-                InkWell(
-                  onTap: onClose,
-                  child: showCloseButton
-                      ? CircleAvatar(
-                          backgroundColor: appTheme.theme(context).errorColor,
-                          child: Icon(iconClose, color: colorPallete.white),
-                          radius: 17,
-                        )
-                      : SizedBox(),
-                )
-              ],
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              ),
             ),
           ),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
