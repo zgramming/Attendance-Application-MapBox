@@ -27,6 +27,12 @@ Attendance Tracking Application , implementation using flutter_map and Geolocato
 - [x] Drawer Menu
 - [ ] Unimaginable Improvements 
 
+## Download
+
+|app-arm64-v8a|app-armeabi-v7a|app-x86_64|
+|:-----------:|:-------------:|:--------:|
+|[<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/APK_format_icon.png" width="50px">](http://www.zimprov.id/absensi_online/apk/absensi_online/mapbox/app-arm64-v8a-release.apk)|[<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/APK_format_icon.png" width="50px">](http://www.zimprov.id/absensi_online/apk/absensi_online/mapbox/app-armeabi-v7a-release.apk)|[<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/APK_format_icon.png" width="50px">](http://www.zimprov.id/absensi_online/apk/absensi_online/mapbox/app-x86_64-release.apk)|
+|7,8 MB|7,4 MB|8 MB|
 
 ## API
 
