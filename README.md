@@ -6,6 +6,31 @@
 
 Attendance Tracking Application , implementation using flutter_map and Geolocator packages for tracking user location. Backend used is Codeigniter 3.
 
+## Adding your Mapbox into project
+
+1. If you already have mapbox account you can follow this <a href="https://account.mapbox.com/auth/signin/"> Link </a> or you can sign-up if you don't have account.
+2. After that , go to <a href="https://studio.mapbox.com/">studio.mapbox.com</a> to create your map style. 
+3. Then click **New Style** and choose a template , recommended you can choose **streets / basic** style. After choose the template you can click **Customize**
+
+<img src="https://i.stack.imgur.com/8cwe2.png" height="500">
+
+4.Next , You will be redirect to page for edit your map. If you have finished edit your map, click **Share** in tab production ,scroll until you find **Developer Resource**. Then select **Third Party** tab. Click dropdown and select **Carto**. After that you can copy **Integration URL** this is your style mapbox.
+
+<img src="https://i.stack.imgur.com/O6dub.jpg" height="500">
+
+5. If you success follow all instruction above , you will see API mapbox style something like this `https://api.mapbox.com/styles/v1/zeffryy/ckbpz3hxh4hdq1in027gqrem5/tiles/256/{z}/{x}/{y}@2x?access_token=xxx` , this url which will be used as **urlTemplate** in flutter project.
+
+6. Then you can change **urlTemplate** in FlutterMap widget with the style that you have made. 
+
+```
+ TileLayerOptions(
+                  urlTemplate:
+                      'https://api.mapbox.com/styles/v1/zeffryy/ckbm42cwb124f1ipgndrdcz8p/tiles/256/{z}/{x}/{y}@2x?access_token=xxx',
+                  subdomains: ['a', 'b', 'c'],
+                ),
+```
+
+<img src="https://i.stack.imgur.com/gtnJY.png" height="500">
 
 ## Installing
 
