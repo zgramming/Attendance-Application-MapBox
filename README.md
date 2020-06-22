@@ -14,7 +14,7 @@ Attendance Tracking Application , implementation using flutter_map and Geolocato
 
 <img src="https://i.stack.imgur.com/8cwe2.png" height="500">
 
-4.Next , You will be redirect to page for edit your map. If you have finished edit your map, click **Share** in tab production scroll until you find **Developer Resource**. Then select **Third Party** tab. Click dropdown and select **Carto**. After that you can copy **Integration URL** this is your style mapbox.
+4.Next , You will be redirect to page for edit your map. If you have finished edit your map, click **Share** in tab production ,scroll until you find **Developer Resource**. Then select **Third Party** tab. Click dropdown and select **Carto**. After that you can copy **Integration URL** this is your style mapbox.
 
 <img src="https://i.stack.imgur.com/O6dub.jpg" height="500">
 
