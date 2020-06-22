@@ -76,8 +76,7 @@ class _MapScreenState extends State<MapScreen> {
               ),
               layers: [
                 TileLayerOptions(
-                  urlTemplate:
-                      'https://api.mapbox.com/styles/v1/zeffryy/ckbm42cwb124f1ipgndrdcz8p/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemVmZnJ5eSIsImEiOiJja2JtM3hrOWMxZmJ0MnNvZDZ5b3FteXZvIn0.by1MdhnYRjFSDTClAVMNyg',
+                  urlTemplate: 'YOUR MAPBOX URL',
                   subdomains: ['a', 'b', 'c'],
                 ),
                 // ADD THIS
