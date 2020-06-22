@@ -30,6 +30,7 @@ class _MapScreenState extends State<MapScreen> {
   // ADD THIS
   MapController mapController = MapController();
   UserLocationOptions userLocationOptions;
+
   // ADD THIS
   List<Marker> markers = [];
   static const double radiusCircle = 6;
@@ -75,7 +76,8 @@ class _MapScreenState extends State<MapScreen> {
               ),
               layers: [
                 TileLayerOptions(
-                  urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                  urlTemplate:
+                      'https://api.mapbox.com/styles/v1/zeffryy/ckbm42cwb124f1ipgndrdcz8p/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemVmZnJ5eSIsImEiOiJja2JtM3hrOWMxZmJ0MnNvZDZ5b3FteXZvIn0.by1MdhnYRjFSDTClAVMNyg',
                   subdomains: ['a', 'b', 'c'],
                 ),
                 // ADD THIS
@@ -85,6 +87,7 @@ class _MapScreenState extends State<MapScreen> {
                     buildCircleMarker(value),
                   ],
                 ),
+
                 // ADD THIS
                 userLocationOptions,
               ],
