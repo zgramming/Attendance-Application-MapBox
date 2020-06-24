@@ -44,6 +44,7 @@ Reference : <a href="https://stackoverflow.com/a/58125136/7360353"> Stackoverflo
 ## Feature
 
 - [x] Tracking user location
+- [x] Autocomplete Search Absen Destination
 - [x] Absent only at certain radius [radius color will be green if user inside radius otherwise radius color will be purple]
 - [x] Detecting mockup location
 - [x] Add destination based on user choose in maps
