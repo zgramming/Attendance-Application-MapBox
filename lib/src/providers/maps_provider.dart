@@ -1,10 +1,28 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:mapbox_search/mapbox_search.dart';
 
 class MapsProvider extends ChangeNotifier {
   Position _currentPosition;
   Position get currentPosition => _currentPosition;
+
+  List<MapBoxPlace> _autocompleteMapbox = [];
+  List<MapBoxPlace> get autocompleteMapbox => _autocompleteMapbox;
+
+  Future<List<MapBoxPlace>> getAutocompleteMapbox({
+    @required String query,
+    @required String apiKey,
+  }) async {
+    try {
+      final result = await PlacesSearch(apiKey: apiKey, country: 'id', language: 'id', limit: 5)
+          .getPlaces(query);
+      _autocompleteMapbox = result;
+      return result;
+    } catch (e) {
+      rethrow;
+    }
+  }
 
   Future<void> getCurrentPosition() async {
     try {
