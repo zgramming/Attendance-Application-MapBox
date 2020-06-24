@@ -35,6 +35,8 @@ dependencies:
   image_picker: ^0.6.7+2
   percent_indicator: ^2.1.5
   scrollable_positioned_list: ^0.1.6
+  mapbox_search: ^2.0.0
+  flutter_typeahead: ^1.8.3
 
   global_template:
     path: global_template

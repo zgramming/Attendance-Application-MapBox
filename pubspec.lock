@@ -71,6 +71,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.14.12"
+  color:
+    dependency: transitive
+    description:
+      name: color
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
   console_log_handler:
     dependency: transitive
     description:
@@ -153,6 +160,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.0"
+  flutter_keyboard_visibility:
+    dependency: transitive
+    description:
+      name: flutter_keyboard_visibility
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0"
   flutter_launcher_icons:
     dependency: "direct dev"
     description:
@@ -179,6 +193,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_typeahead:
+    dependency: "direct main"
+    description:
+      name: flutter_typeahead
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.8.3"
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -324,6 +345,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.11.4"
+  mapbox_search:
+    dependency: "direct main"
+    description:
+      name: mapbox_search
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0"
   matcher:
     dependency: transitive
     description:
