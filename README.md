@@ -36,11 +36,12 @@ Reference : <a href="https://stackoverflow.com/a/58125136/7360353"> Stackoverflo
 
 ## Configuration Project
 
-Change Mapbox API Key with your in `global_template/lib/variable/config/app_config.dart`
+Change Mapbox API Key with your in `global_template/lib/variable/config/app_config.dart`. It will be used for autocompleted Search Address
 
 ```
   static const mapBoxApiKey ='YOUR API KEY';
 ```
+
 
 ## Installing
 
