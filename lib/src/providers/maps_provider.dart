@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:global_template/global_template.dart';
 import 'package:mapbox_search/mapbox_search.dart';
 
 class MapsProvider extends ChangeNotifier {
@@ -15,8 +16,12 @@ class MapsProvider extends ChangeNotifier {
     @required String apiKey,
   }) async {
     try {
-      final result = await PlacesSearch(apiKey: apiKey, country: 'id', language: 'id', limit: 5)
-          .getPlaces(query);
+      final result = await PlacesSearch(
+        apiKey: apiKey,
+        country: AppConfig.countryCodeID,
+        language: AppConfig.languageID,
+        limit: 5,
+      ).getPlaces(query);
       _autocompleteMapbox = result;
       return result;
     } catch (e) {
