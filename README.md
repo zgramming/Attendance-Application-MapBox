@@ -34,6 +34,15 @@ Attendance Tracking Application , implementation using flutter_map and Geolocato
 
 Reference : <a href="https://stackoverflow.com/a/58125136/7360353"> Stackoverflow </a>
 
+## Configuration Project
+
+Change Mapbox API Key with your in `global_template/lib/variable/config/app_config.dart`. It will be used for autocompleted Search Address
+
+```
+  static const mapBoxApiKey ='YOUR API KEY';
+```
+
+
 ## Installing
 
 1. Git clone **https://github.com/zgramming/Attendance-Application-MapBox**
@@ -44,6 +53,7 @@ Reference : <a href="https://stackoverflow.com/a/58125136/7360353"> Stackoverflo
 ## Feature
 
 - [x] Tracking user location
+- [x] Autocomplete Search Absen Destination
 - [x] Absent only at certain radius [radius color will be green if user inside radius otherwise radius color will be purple]
 - [x] Detecting mockup location
 - [x] Add destination based on user choose in maps
