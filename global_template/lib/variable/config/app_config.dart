@@ -12,11 +12,14 @@ class AppConfig {
   final String absensiController = 'Absensi_controller';
   final String destinasiController = 'Absensi_controller';
 
-  static const mapBoxApiKey = 'ENTER YOUR API KEY';
-
   static const defaultImageNetwork = 'https://flutter.io/images/catalog-widget-placeholder.png';
   static const imageLogoAsset = 'assets/images/logo.png';
   static const emptyDestination = 'assets/images/empty_destination.png';
+
+  static const languageID = 'id';
+  static const countryCodeID = 'ID';
+
+  static const mapBoxApiKey = 'YOUR API KEY';
 }
 
 final appConfig = AppConfig();
