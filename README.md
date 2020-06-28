@@ -6,6 +6,16 @@
 
 Attendance Tracking Application , implementation using flutter_map and Geolocator packages for tracking user location. Backend used is Codeigniter 3.
 
+## Configuration Project
+
+Change Mapbox API Key with your in `global_template/lib/variable/config/app_config.dart`. It will be used for MapBox API and Autocompleted Search Address
+
+```
+  static const mapBoxApiKey ='YOUR API KEY';
+```
+
+How to get API Key ? visit <a href="https://account.mapbox.com/">account.mapbox.com</a> and scroll until you find **Access Token**
+
 ## Adding your Mapbox into project
 
 1. If you already have mapbox account you can follow this <a href="https://account.mapbox.com/auth/signin/"> Link </a> or you can sign-up if you don't have account.
@@ -34,13 +44,6 @@ Attendance Tracking Application , implementation using flutter_map and Geolocato
 
 Reference : <a href="https://stackoverflow.com/a/58125136/7360353"> Stackoverflow </a>
 
-## Configuration Project
-
-Change Mapbox API Key with your in `global_template/lib/variable/config/app_config.dart`. It will be used for autocompleted Search Address
-
-```
-  static const mapBoxApiKey ='YOUR API KEY';
-```
 
 
 ## Installing
