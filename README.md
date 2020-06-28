@@ -25,7 +25,7 @@ Attendance Tracking Application , implementation using flutter_map and Geolocato
 ```
  TileLayerOptions(
                   urlTemplate:
-                      'https://api.mapbox.com/styles/v1/zeffryy/ckbm42cwb124f1ipgndrdcz8p/tiles/256/{z}/{x}/{y}@2x?access_token=xxx',
+                      'https://api.mapbox.com/styles/v1/zeffryy/ckbm42cwb124f1ipgndrdcz8p/tiles/256/{z}/{x}/{y}@2x?access_token=${AppConfig.mapBoxApiKey}',
                   subdomains: ['a', 'b', 'c'],
                 ),
 ```
@@ -53,7 +53,7 @@ Change Mapbox API Key with your in `global_template/lib/variable/config/app_conf
 ## Feature
 
 - [x] Tracking user location
-- [x] Autocomplete Search Absen Destination
+- [x] Autocomplete Search Address [Mapbox Autocomplete]
 - [x] Absent only at certain radius [radius color will be green if user inside radius otherwise radius color will be purple]
 - [x] Detecting mockup location
 - [x] Add destination based on user choose in maps
