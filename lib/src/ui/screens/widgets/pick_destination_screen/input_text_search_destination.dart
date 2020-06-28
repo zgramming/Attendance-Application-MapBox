@@ -63,20 +63,21 @@ class InputTextSearchAddress extends StatelessWidget {
               hintText: 'Cari Lokasi Absen',
               filled: true,
               fillColor: colorPallete.white,
-              // border: InputBorder.none,
               border: InputBorder.none,
               prefixIcon: const Icon(FontAwesomeIcons.searchLocation, size: 18),
               suffixIcon: Selector<GlobalProvider, bool>(
                 selector: (_, provider) => provider.isShowClearTextField,
                 builder: (_, showClearTextField, __) {
-                  return showClearTextField
-                      ? IconButton(
-                          icon: const Icon(FontAwesomeIcons.times),
-                          onPressed: () => _clearSearchLocation(context),
-                          iconSize: 18,
-                          color: colorPallete.weekEnd,
-                        )
-                      : const SizedBox();
+                  if (showClearTextField) {
+                    return IconButton(
+                      icon: const Icon(FontAwesomeIcons.times),
+                      onPressed: () => _clearSearchLocation(context),
+                      iconSize: 18,
+                      color: colorPallete.weekEnd,
+                    );
+                  } else {
+                    return const SizedBox();
+                  }
                 },
               ),
             ),
@@ -91,9 +92,9 @@ class InputTextSearchAddress extends StatelessWidget {
       final List<Placemark> placemark =
           await Geolocator().placemarkFromAddress(address.toLowerCase());
       if (placemark != null) {
-        final Position position = placemark[0].position;
-        mapController.move(LatLng(position.latitude, position.longitude), 18);
-
+        for (final item in placemark) {
+          mapController.move(LatLng(item.position.latitude, item.position.longitude), 18);
+        }
         print(placemark[0].toJson());
       } else {
         throw 'Destinasi Tidak Ditemukan';
