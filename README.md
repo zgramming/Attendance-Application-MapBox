@@ -30,7 +30,7 @@ How to get API Key ? visit <a href="https://account.mapbox.com/">account.mapbox.
 
 5. If you success follow all instruction above , you will see API mapbox style something like this `https://api.mapbox.com/styles/v1/zeffryy/ckbpz3hxh4hdq1in027gqrem5/tiles/256/{z}/{x}/{y}@2x?access_token=xxx` , this url which will be used as **urlTemplate** in flutter project.
 
-6. Then you can change **urlTemplate** in FlutterMap widget with the style that you have made. 
+6. Then you can change **urlTemplate** FlutterMap widget in **map_screen.dart** and **add_destination_screen.dart** with the style that you have made. 
 
 ```
  TileLayerOptions(
