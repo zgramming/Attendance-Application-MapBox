@@ -73,10 +73,7 @@ class _AddDestinationScreenState extends State<AddDestinationScreen> {
                   zoom: 13.0,
                   onPositionChanged: (mapPositioned, hasGesture) {
                     print('Move Camera ${mapPositioned.center}');
-                    Future.delayed(
-                      const Duration(seconds: 1),
-                      () => context.read<MapsProvider>().setTrackingCameraPosition(mapPositioned),
-                    );
+                    context.read<MapsProvider>().setTrackingCameraPosition(mapPositioned);
                   },
                 ),
                 layers: [
