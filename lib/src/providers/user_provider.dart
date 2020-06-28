@@ -35,8 +35,8 @@ class UserProvider extends ChangeNotifier {
       for (final item in user) {
         _user = item;
       }
-      notifyListeners();
     }
+    notifyListeners();
   }
 
   Future<void> removeSessionUser() async {
