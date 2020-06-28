@@ -82,7 +82,7 @@ class _AddDestinationScreenState extends State<AddDestinationScreen> {
                 layers: [
                   TileLayerOptions(
                     urlTemplate:
-                        'https://api.mapbox.com/styles/v1/zeffryy/ckbm42cwb124f1ipgndrdcz8p/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemVmZnJ5eSIsImEiOiJja2JtM3hrOWMxZmJ0MnNvZDZ5b3FteXZvIn0.by1MdhnYRjFSDTClAVMNyg',
+                        'https://api.mapbox.com/styles/v1/zeffryy/ckbm42cwb124f1ipgndrdcz8p/tiles/256/{z}/{x}/{y}@2x?access_token=${AppConfig.mapBoxApiKey}',
                     subdomains: ['a', 'b', 'c'],
                   ),
                   MarkerLayerOptions(
